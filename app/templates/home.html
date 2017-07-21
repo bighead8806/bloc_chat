@@ -1,5 +1,10 @@
 <h1>Home Page</h1>
 <div ng-repeat="room in rooms.all">
+    <form>
+    Enter a room name:
+    <input type="text">
+    <input type="submit" value="submit">
+    </form>
      <p>{{ room.$value }}</p>
      
 </div>
