@@ -6,8 +6,8 @@
       
     Room.all = rooms;
       
-    Room.add = function(room){
-        rooms.$add(room);
+    Room.create = function(newChatRoom){
+        rooms.$add(newChatRoom);
     };
       
     return Room;
