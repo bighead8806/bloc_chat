@@ -1,6 +1,7 @@
 (function() {
   function RoomCtrl(Room, $uibModal) {
       this.all = Room.all;
+      this.open = function(){
       
       var modalInstance = $uibModal.open({
           animation: true,
@@ -9,6 +10,7 @@
           ariaDescribedBy: "modal-button-area"
           
       });
+      };
   }
 
   angular

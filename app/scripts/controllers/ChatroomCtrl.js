@@ -4,5 +4,5 @@
     
 angular
     .module('blocChat')
-    .controller('ModalCtrl',)
+    .controller('ChatroomCtrl',)
 })();

@@ -1,5 +1,7 @@
+<section class="page-sidebar"></section>
 <h1>Home Page</h1>
-    <button ng-click="open()" id="modal-button-area" type="button">Create a new chat room</button>
+    <button ng-click="modal.open()" id="modal-button-area" type="button">Create a new chat room</button>
+</section>
     <div ng-repeat="room in rooms.all">
      <p>{{ room.$value }}</p>
 </div>
