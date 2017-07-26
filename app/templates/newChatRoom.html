@@ -1,13 +1,13 @@
 <div class="modal-header">
-    <h3 class="modal-title">New Chat Room</h3>
+    <h3 class="modal-title" id="modal-title">New Chat Room</h3>
 </div>
 <div class="modal-body">
     <div class="form-group modal-input">
         <h5>Chat Room Name:</h5>
-        <input type="text" ng-model="text">
+        <input type="text" ng-controller="$modal" ng-model="text">
     </div>
 </div>
 <div class="modal-footer">
-   <button class="btn btn-success" type="button" ng-disabled="text === ''" ng-click="ok()">Create Room</button>
+   <button class="btn btn-success" type="button" ng-click="ok()">Create Room</button>
     <button class="btn" type="button" ng-click="cancel()">Cancel</button>
 </div>
