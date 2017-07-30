@@ -16,11 +16,19 @@
           ariaDescribedBy: "modal-button-area"
           
       });
+         
+      this.ok = function(){
+          this.room = {name: ''
+      }
+          
+      this.close(this.name);
+          
+      };
+         
+      this.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+       };
      } 
-            this.cancel = function() {
-                $uibModalInstance.dismiss('cancel');
-            };
-        
     };
     
 angular

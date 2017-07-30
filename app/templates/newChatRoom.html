@@ -2,12 +2,14 @@
     <h3 class="modal-title" id="modal-title">New Chat Room</h3>
 </div>
 <div class="modal-body">
+    <div class="form-group">
     <div class="form-group modal-input">
         <h5>Chat Room Name:</h5>
-        <input type="text" ng-controller="$modal" ng-model="text">
+        <input type="text" ng-controller="$modal" ng-model="text" placeholder="Enter your room's name here please...">
+    </div>
     </div>
 </div>
 <div class="modal-footer">
-   <button class="btn btn-success" type="button" ng-click="ok()">Create Room</button>
-    <button class="btn" type="button" ng-click="cancel()">Cancel</button>
+   <button class="btn btn-success" type="button" ng-controller="$modal" ng-click="modal.ok()">Create Room</button>
+    <button class="btn" type="button" ng-controller="$modal" ng-click="cancel()">Cancel</button>
 </div>
