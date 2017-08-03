@@ -7,7 +7,7 @@
             */
             var modalInstance = $uibModal.open({
                 templateUrl: "/templates/newChatRoom.html",
-                controller: "ModalCtrl",
+                controller: "ModalInstanceCtrl",
                 controllerAs: '$modal',
                 /**backdrop allows for people to close modal if they click outside window
                 */
