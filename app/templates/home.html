@@ -1,5 +1,8 @@
-<h1>Home Page</h1>
-<div ng-repeat="room in rooms.all">
-     <p>{{ room.$value }}</p>
-     
-</div>
+<h1>Adam Mohrbacher's Bloc Chat</h1>
+<section class="sidebar">
+    <button type="button" ng-controller="ModalCtrl as modal" ng-click="modal.open()" id="modal-button-area" >Create a new chat room</button>
+     <div ng-repeat="room in rooms.all">
+        <p>{{ room.$value }}</p>
+    </div>
+</section>
+   

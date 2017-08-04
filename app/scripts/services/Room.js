@@ -6,6 +6,10 @@
       
     Room.all = rooms;
       
+    Room.add = function(newChatRoom){
+        rooms.$add(newChatRoom);
+    };
+      
     return Room;
   }
 
