@@ -1,8 +1,10 @@
 (function() {
     function ModalInstanceCtrl($uibModalInstance, Room) {
+        
         this.submit = function() {
             Room.add(this.newRoom);
             console.log("I added a room!");
+            console.log(this.newRoom);
             $uibModalInstance.close();
         };
 
