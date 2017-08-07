@@ -2,14 +2,16 @@
 <section class="sidebar">
     <button type="button" ng-controller="ModalCtrl as modal" ng-click="modal.open()" id="modal-button-area" >Create a new chat room</button>
      <div ng-repeat="room in rooms.all">
-        <div class="sidebar-room-selection" ng-click="rooms.setRoom()">{{ room.$value }}</p>
+        <div class="sidebar-room-selection" ng-click="rooms.setRoom(room)">{{ room.$value }}</p>
     </div>
 </section>
+<h2>{{rooms.selectedRoom.$value}}</h2>
 <secton class = "message-area">
-    <div class = "username">{{message.username}}</div>
-    <div class = "text-content">{{message.content}}</div>
-    <div class = "message-time-stamp">{{message.sentAt}}</div>
-    <div class = "room-id">{{message.roomId}}</div>
-    </p>
+    <div class="message" ng-repeat="message in rooms.messages">
+        <div class = "username">{{message.username}}</div>
+        <div class = "text-content">{{message.content}}</div>
+        <div class = "message-time-stamp">{{message.sentAt}}</div>
+        <div class = "room-id">{{message.roomId}}</div>
+    </div>
 </secton>
    
