@@ -1,16 +1,13 @@
 (function() {
-  function BlocChatCookies($cookies) {
+  function BlocChatCookies($cookies, $uibModal) {
     var currentUser = $cookies.get('blocChatCurrentUser');
     if (!currentUser || currentUser === '') {
          $uibModal.open({
             templateUrl: "/templates/username.html",
             controller: "UsernameCtrl as username",
-            backdrop: "false" 
-         })
+            backdrop: "static" 
+         });
     }
-     else{
-         alert("Invalid username!");
-     }
   }
 
   angular

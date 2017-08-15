@@ -1,15 +1,16 @@
 <div class="modal-header">
     <h3 class="modal-title" id="modal-title">Enter Your Name</h3>
 </div>
-<form ng-submit="username.submit()">
+<form ng-submit="username.establishUsername()">
     <div class="modal-body">
         <div class="form-group modal-input">
             <label class="control-label">Your Name:</label>
-            <input class="form-control" ng-model="username.username" title="username" placeholder="Enter name here please...">
+            <input class="form-control" ng-model="username.enteredData" title="enteredData" placeholder="Enter name here please...">
         </div>
         </div>
+    <div class="modal-footer bg-light">
+        <button type="submit" class="btn primary-btn">Set Username Now!</button>
+    </div>
 </form>
-<div class="modal-footer bg-light">
-    <button type="submit" class="btn primary-btn">Set Username Now!</button>
-</div>
+
        
