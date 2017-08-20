@@ -11,6 +11,10 @@
         return messages;
     
     };
+      
+    Message.send = function(newMessage){
+        
+    };
     /**Return the array that now contains the messages of the selcted room.
     */
     return Message;
