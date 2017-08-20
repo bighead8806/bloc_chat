@@ -1,6 +1,7 @@
 (function() {
   function UsernameCtrl($uibModalInstance, $cookies) { 
-    this.establishUsername = function(){
+      this.enteredData = '';
+      this.establishUsername = function(){
         this.enteredData = this.enteredData.trim();
         if(this.enteredData){
             $cookies.put('blocChatCurrentUser', this.enteredData);

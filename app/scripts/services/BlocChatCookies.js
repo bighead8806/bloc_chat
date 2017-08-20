@@ -5,7 +5,8 @@
          $uibModal.open({
             templateUrl: "/templates/username.html",
             controller: "UsernameCtrl as username",
-            backdrop: "static" 
+            backdrop: "static", 
+            keyboard: false
          });
     }
   }
