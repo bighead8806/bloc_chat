@@ -13,7 +13,12 @@
     };
       
     Message.send = function(newMessage){
-        
+        Message = {
+					username: $cookies.get('blocChatCurrentUser'),
+					content: newMessage,
+					sentAt: getTime(),
+					roomId: selectedRoom
+				}
     };
     /**Return the array that now contains the messages of the selcted room.
     */
@@ -23,5 +28,5 @@
 
   angular
     .module('blocChat')
-    .factory('Message', ['$firebaseArray', Message]);
+    .factory('Message', ['$firebaseArray', '$cookies', Message]);
 })();
