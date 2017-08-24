@@ -1,5 +1,5 @@
 (function() {
-  function Message($firebaseArray) {
+  function Message($firebaseArray, $cookies) {
     var Message = {};
     var ref = firebase.database().ref().child("messages");
     /**The following function takes the selected room and reveals messages for this room. orderByChild method reveals the messages logged in the firebase database of selected room. It's chained together with the child() method that is here represented by the variable ref. 
@@ -13,12 +13,12 @@
     };
       
     Message.send = function(newMessage){
-        Message = {
-					username: $cookies.get('blocChatCurrentUser'),
+        Message.push({
+					username: currentUser,
 					content: newMessage,
-					sentAt: getTime(),
-					roomId: selectedRoom
-				}
+					sentAt: '8:30 am',
+					roomId: selectedRoom.$id
+				});
     };
     /**Return the array that now contains the messages of the selcted room.
     */
@@ -28,5 +28,5 @@
 
   angular
     .module('blocChat')
-    .factory('Message', ['$firebaseArray', '$cookies', Message]);
+    .factory('Message', ['$firebaseArray', 'Room', '$cookies', Message]);
 })();

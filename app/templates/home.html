@@ -4,6 +4,7 @@
      <div ng-repeat="room in rooms.all">
         <div class="sidebar-room-selection" ng-click="rooms.setRoom(room)">{{ room.$value }}</p>
     </div>
+    </div>
 </section>
 <h2>{{rooms.selectedRoom.$value}}</h2>
 <secton class = "message-area">
@@ -15,12 +16,11 @@
     </div>
 </secton>
 <section class = "new-message-area">
-        <form ng-submit = "room.Message.send">
+        <form ng-submit = "rooms.submitNewMessage()">
             <div class = "input-area">
-                <input class = "form-control" ng-model = "rooms.newMessage.content" placeholder="Enter your lame message here...">
-            <button type="submit" class="btn secondary-btn">Send Message Now!</button>
+                <input class = "form-control" ng-model = "rooms.newMessage" placeholder="Enter your message here...">
+            <button type="submit" class="btn-sendmessage">Send Message Now!</button>
             </div> 
         </form>
-    </div>
 </section>
    
