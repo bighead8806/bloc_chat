@@ -1,0 +1,87 @@
+.home {
+    height: 100%;
+    background-color: lightcyan;
+}
+
+.sidebar {
+    float: left; 
+    font-family: sans-serif;
+    left: 0px;
+    width: 15%;
+    padding: 20px;
+    min-height: 100%;
+    height: 100%;
+    background-color: darkkhaki;
+    color: crimson;
+    overflow-y: scroll;
+}
+
+.message-area {
+    position: fixed;
+    font-size: small; 
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-color: lightblue;
+    overflow-y: scroll;
+    border: solid black 2px; 
+}
+
+.sidebar h1 {
+    color: darkmagenta;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.sidebar h1: hover {
+    font-size: 150%;
+    font-weight: bold; 
+}
+
+#modal-button-area{
+  color: #679798;
+  background-color: #fbfcfe;
+}
+
+.enter-message {
+    position: fixed; 
+    bottom: 0;
+    padding: 35px 35px 35px 0;
+    background-color: gold; 
+    width: 100%;
+    border-style: groove;
+    border-width: 2px 2px 1px 1px;
+    border-color: black;
+}
+
+.enter-message .form-control{
+    width: 50%;
+    margin-left: 10px; 
+    border-color: black; 
+}
+
+.room{
+    margin-top: 1.5em;
+}
+
+.message{
+    display: block;
+    padding: 5px;
+    width: 150px;
+    background-color: pink;
+}
+
+.bold-the-labels{
+    font-weight:900;
+}
+
+.btn-sendmessage{
+  color: black;
+  margin-top: 5px; 
+  background-color: orange;
+  margin-left: 10px; 
+}
+
+.btn primary-btn{
+    background-color: forestgreen;
+}

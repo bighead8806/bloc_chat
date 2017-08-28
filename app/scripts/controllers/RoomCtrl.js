@@ -11,8 +11,12 @@
       }; 
       
       this.submitNewMessage = function(newMessage){
-          console.log(this.selectedRoom.$id);
-          Message.send(this.newMessage, this.selectedRoom.$id);
+          Message.send({
+              content: this.newMessage, 
+              roomId: this.selectedRoom.$id,
+              sentAt: this.sentAt,
+              username: this.currentUser
+          });
           this.newMessage = '';
       };
   }
