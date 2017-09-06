@@ -2,7 +2,7 @@
   function RoomCtrl(Room, Message, $cookies) {
       this.all = Room.all; 
       
-      this.currentUser = $cookies.get('blocChatCurrentUser');
+      //this.currentUser = $cookies.get('blocChatCurrentUser');
         /**You establish the selected room with the following function. */
       this.setRoom = function(clickedRoom){
           this.selectedRoom = clickedRoom;
@@ -15,7 +15,7 @@
               content: this.newMessage, 
               roomId: this.selectedRoom.$id,
               sentAt: this.sentAt,
-              username: this.currentUser
+              username: $cookies.get('blocChatCurrentUser')
           });
           this.newMessage = '';
       };
